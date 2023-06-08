@@ -46,9 +46,7 @@ At this point, we will need our simple backend server, so make sure the Node ser
 1. The first API endpoint is accessible on `GET: http://localhost:3000/?q=[search query]` which returns a list of countries containing the search query. Example: `http://localhost:3000/?q=ira` returns list of all countries that include `ira` in their names.
 2. The second API endpoint is accessible on `GET: http://localhost:3000/chart/[country code]` which returns the instantaneous fictional currency value of the given country code. Example: `http://localhost:3000/chart/IR` returns a single time point data where the `x` value is time in `HHMM` format and `y` is a fictional currency value.
 
-Now in the first part, the goal is to create a searchbar where the user can type and see the results in real-time. Create an input and style it to your liking and come up with an elegant way to show the results interactively as the user types a search query in the input. Here, there is no specific design guideline, so make the styling the way you find personally pleasing.
-
-> **Note:** Data fetching should be done with **React Query**
+Now in the first part, the goal is to create a searchbar where the user can type and see the results in real-time. Create an input and style it to your liking and come up with an elegant way to show the results interactively as the user types a search query in the input. Here, there is no specific design guideline, so make the styling the way you find personally pleasing.  It is also necessary to utilize **React Query** for data fetching.
 
 > **Note:** Reducing and optimizing the number of queries to the server is a definitely a plus
 
