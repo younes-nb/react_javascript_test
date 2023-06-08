@@ -1,0 +1,116 @@
+:root {
+  /* color system */
+  --clr-bg: #fff;
+  --clr-fg: #202020;
+  --clr-white: #fff;
+  --clr-black: #202020;
+  --clr-primary: rgba(111, 192, 155, 1);
+  --clr-primary-tint: rgba(111, 192, 155, 0.2);
+  --clr-accent: rgba(213, 101, 56, 1);
+  --clr-accent-tint: rgba(213, 101, 56, 0.2);
+  --clr-primary-2: rgba(49, 47, 47, 1);
+  --clr-primary-2-tint: rgba(49, 47, 47, 0.2);
+  --clr-accent-2: rgba(237, 139, 32, 1);
+  --clr-accent-2-tint: rgba(237, 139, 32, 0.2);
+  --clr-gray-100: rgb(245, 245, 245);
+  --clr-gray-200: rgb(238, 238, 238);
+  --clr-gray-300: rgb(214, 214, 214);
+  --clr-gray-400: rgb(189, 189, 189);
+  --clr-gray-500: rgb(158, 158, 158);
+  --clr-gray-600: rgb(117, 117, 117);
+  --clr-gray-700: rgb(97, 97, 97);
+  --clr-gray-800: rgb(75, 75, 75);
+  --clr-blue-primary: rgb(89, 65, 205);
+  --clr-blue-tint: rgb(213, 206, 242);
+  --clr-error: #dc2626;
+
+  /* font system */
+  --fs-0: 1rem;
+  --fs-00: 1.1rem;
+  --fs-1: 1.2rem;
+  --fs-2: 1.4rem;
+  --fs-3: 1.6rem;
+  --fs-4: 1.8rem;
+  --fs-5: 2rem;
+  --fs-6: 2.4rem;
+  --fs-7: 3rem;
+  --fs-8: 3.6rem;
+  --fs-9: 4.8rem;
+  --fs-10: 6rem;
+  --fs-11: 7.2rem;
+
+  /* spacing system */
+  --spacing-1: 0.4rem;
+  --spacing-2: 0.8rem;
+  --spacing-3: 1.2rem;
+  --spacing-4: 1.6rem;
+  --spacing-5: 2.4rem;
+  --spacing-6: 3.2rem;
+  --spacing-7: 4.8rem;
+  --spacing-8: 6.4rem;
+  --spacing-9: 9.6rem;
+  --spacing-10: 12.8rem;
+  --spacing-11: 19.2rem;
+  --spacing-12: 25.6rem;
+  --spacing-13: 38.4rem;
+  --spacing-14: 51.2rem;
+  --spacing-15: 64rem;
+  --spacing-16: 76.8rem;
+  --card-padding-inline: var(--spacing-4);
+
+  --br: 2px;
+  --br-2: 4px;
+
+  /* box-shadows */
+  --box-shadow-light: 0 2px 6px rgba(0, 0, 0, 0.13);
+  --box-shadow-dark: 0 2px 6px rgba(0, 0, 0, 0.28);
+
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+html {
+  font-size: 62.5%;
+  overflow: auto;
+  scrollbar-gutter: stable;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: var(--fs-5);
+  font-weight: 400;
+  color: var(--clr-fg);
+  background-color: #fff;
+}

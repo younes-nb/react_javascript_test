@@ -1,0 +1,13 @@
+.main {
+  width: min(90%, 114rem);
+  padding: var(--spacing-6) var(--spacing-4);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.instructions {
+  margin-top: var(--spacing-8);
+}
