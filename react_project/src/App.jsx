@@ -1,21 +1,24 @@
+import { Link } from "react-router-dom";
 import styles from "./App.module.css";
-import react_logo from "./assets/react_logo.png";
 
 function App() {
   return (
-    <main className={styles.main}>
-      <img src={react_logo} />
-      <h1>Project Template</h1>
-      <div className={styles.instructions}>
-        <div>
-          <p>Installed: React Router, React Query</p>
-          <p>
-            Add any additional packages you need to the json file when
-            installing.
-          </p>
-        </div>
-      </div>
-    </main>
+    <>
+      <main className={styles.container}>
+        <h1>Steps</h1>
+        <ul className={styles.list}>
+          <Link to="/layout" className={styles.listItem}>
+            2. Layout
+          </Link>
+          <Link to="/table" className={styles.listItem}>
+            3. Table
+          </Link>
+          <Link to="/searchbar" className={styles.listItem}>
+            4. Search bar
+          </Link>
+        </ul>
+      </main>
+    </>
   );
 }
 

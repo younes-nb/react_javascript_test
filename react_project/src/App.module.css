@@ -1,13 +1,20 @@
-.main {
-  width: min(90%, 114rem);
-  padding: var(--spacing-6) var(--spacing-4);
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.container {
+  padding: var(--spacing-5) var(--spacing-8);
 }
 
-.instructions {
-  margin-top: var(--spacing-8);
+.list {
+  margin-top: var(--spacing-5);
+}
+
+.listItem {
+  display: block;
+  text-decoration: none;
+  color: var(--clr-black);
+  margin-bottom: var(--spacing-3);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.listItem:hover {
+  color: var(--clr-blue-primary);
 }
