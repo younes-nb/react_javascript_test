@@ -4,7 +4,7 @@ A sample project with React to test your familiarities with this library as well
 
 ### Requirements
 
-You need [Node.js](https://nodejs.org/en/download) installed on you machine to run a simple Node server and the **React** project.
+You need [Node.js](https://nodejs.org/en/download) installed on you machine to run the Node server and the **React** project.
 
 ### Included in the Box
 
@@ -41,12 +41,12 @@ and fill it with random data. To make the table cool, add **sort** functionality
 
 ## Step 4: Searchbar
 
-At this point, we will need our simple backend server, so make sure the Node server in `./backend_server` is up and running. This web server creates two API endpoint:
+At this point, we will need our simple backend server, so make sure the Node server in `./backend_server` is up and running. This web server provides two API endpoint:
 
 1. The first API endpoint is accessible on `GET: http://localhost:3000/?q=[search query]` which returns a list of countries containing the search query. Example: `http://localhost:3000/?q=ira` returns list of all countries that include `ira` in their names.
-2. The second API endpoint is accessible on `GET: http://localhost:3000/chart/[country code]` which returns the instantaneous fictional currency value of the given country code. Example: `http://localhost:3000/chart/IR` returns a time series where the `x` value is time and `y` is a fictional currency value.
+2. The second API endpoint is accessible on `GET: http://localhost:3000/chart/[country code]` which returns the instantaneous fictional currency value of the given country code. Example: `http://localhost:3000/chart/IR` returns a single time point data where the `x` value is time in `HHMM` format and `y` is a fictional currency value.
 
-Now the goal in the first part is to create a search bar where the user can type and can see the results in real-time. Create an input and style it to your liking and come up with an elegant way to show the results interactively as the user types a search query in the input. There is no specific design guideline here, so make the styling the way you find personally pleasing.
+Now in the first part, the goal is to create a searchbar where the user can type and see the results in real-time. Create an input and style it to your liking and come up with an elegant way to show the results interactively as the user types a search query in the input. Here, there is no specific design guideline, so make the styling the way you find personally pleasing.
 
 > **Note:** Data fetching should be done with **React Query**
 
@@ -54,7 +54,7 @@ Now the goal in the first part is to create a search bar where the user can type
 
 > **Hint:** Focus more on the UX than the UI
 
-In the next part, we want to go one step further and add an interactive chart using [Chartjs](https://www.chartjs.org/) to show the fictional currency values of a selected country.
+In the next part, we want to go one step further and add an interactive chart using [Chartjs](https://www.chartjs.org/) to show the fictional currency values of the selected country.
 
 First make sure this library in installed, then, create the functionality to fetch the currency value data when the user clicks on one of the search results. The currency value data is a time series that is updated every time you call the API and it should be plotted as a line chart. Make sure to call the API for currency data every second to get an updated time series and update the data in the chart accordingly.
 
