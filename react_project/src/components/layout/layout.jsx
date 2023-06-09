@@ -24,7 +24,7 @@ function Layout() {
   return (
     <>
       <div className="container">
-        <div ref={layoutRef} className={styles.layoutContainer}>
+        <div dir="rtl" ref={layoutRef} className={styles.layoutContainer}>
           <main ref={mainRef} className={styles.main}>
             <p>
               لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با

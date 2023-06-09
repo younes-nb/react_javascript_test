@@ -4,7 +4,8 @@ import styles from "./App.module.css";
 function App() {
   return (
     <>
-      <main className="container">
+      <div className="container">
+        <main dir="ltr">
         <h1>Steps</h1>
         <ul className={styles.list}>
           <Link to="/layout" className={styles.listItem}>
@@ -17,7 +18,8 @@ function App() {
             4. Search bar
           </Link>
         </ul>
-      </main>
+        </main>
+      </div>
     </>
   );
 }

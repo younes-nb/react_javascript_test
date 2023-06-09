@@ -1,7 +1,7 @@
 .tableWrapper {
-  max-height: 80vh;
+  max-height: 70vh;
   overflow: auto;
-  border-radius: 10px;
+  border-radius: 8px;
   box-shadow: var(--box-shadow-dark);
 }
 
@@ -22,10 +22,11 @@
 
 .table th,
 .table td {
-  padding: var(--spacing-5) 0 var(--spacing-5) var(--spacing-4);
+  padding: var(--spacing-3) 0 var(--spacing-3) var(--spacing-3);
   text-align: right;
   vertical-align: middle;
   border-top: 1px solid var(--clr-gray-200);
+  cursor: pointer;
 }
 
 .table tbody tr:nth-child(even) {
@@ -38,5 +39,9 @@
 
 .table td:first-child,
 .table th:first-child {
-  padding-right: var(--spacing-7);
+  padding-right: var(--spacing-5);
+}
+
+.selectedRow {
+  color: var(--clr-blue-primary);
 }

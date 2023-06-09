@@ -123,14 +123,13 @@ h6 {
 }
 
 html {
-  font-size: 62.5%;
   overflow: auto;
   scrollbar-gutter: stable;
 }
 
 body {
   font-family: "Roboto", sans-serif;
-  font-size: var(--fs-5);
+  font-size: var(--fs-1);
   font-weight: 400;
   color: var(--clr-fg);
   background-color: #fff;
