@@ -3,9 +3,9 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
-import Layout from "./components/layout";
-import Table from "./components/table";
-import SearchBar from "./components/search-bar";
+import Layout from "./components/layout/layout";
+import Table from "./components/table/table";
+import SearchBar from "./components/search-bar/search-bar";
 import ErrorPage from "./components/error-page";
 
 const router = createBrowserRouter([

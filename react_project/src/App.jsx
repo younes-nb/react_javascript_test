@@ -4,7 +4,7 @@ import styles from "./App.module.css";
 function App() {
   return (
     <>
-      <main className={styles.container}>
+      <main className="container">
         <h1>Steps</h1>
         <ul className={styles.list}>
           <Link to="/layout" className={styles.listItem}>

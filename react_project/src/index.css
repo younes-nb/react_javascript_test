@@ -135,3 +135,7 @@ body {
   color: var(--clr-fg);
   background-color: #fff;
 }
+
+.container {
+  padding: var(--spacing-5) var(--spacing-8);
+}
