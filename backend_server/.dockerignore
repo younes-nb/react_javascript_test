@@ -1,0 +1,6 @@
+.dockerignore
+.gitignore
+.eslintrc.json
+.prettierrc
+config.env
+node_modules

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="00b4ab64-b52d-41a7-9059-d05b11828cf1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../react_project/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../react_project/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../react_project/src/components/dynamic-table/dynamic-table.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../react_project/src/routes.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../react_project/src/services/api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../react_project/src/utils/currency-data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../react_project/src/utils/use-search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/.eslintrc.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/../react_project/.eslintrc.cjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../react_project/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../react_project/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/search-bar/search-bar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../react_project/src/components/search-bar/search-bar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/table/dynamic-table.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/table/dynamic-table.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/../react_project/src/components/dynamic-table/dynamic-table.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/table/table-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/../react_project/src/components/table/table-data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/components/table/table.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../react_project/src/components/table/table.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../react_project/src/main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react_project/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../react_project/vite.config.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2R2ASw1h6K6WjU075EdfmtxDBwc" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="00b4ab64-b52d-41a7-9059-d05b11828cf1" name="Changes" comment="" />
+      <created>1686437805377</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1686437805377</updated>
+      <workItem from="1686437807017" duration="426000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

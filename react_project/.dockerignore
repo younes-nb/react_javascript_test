@@ -1,0 +1,9 @@
+.gitignore
+.idea
+.eslintrc.cjs
+.dockerignore
+vite.config.js
+jest.config.cjs
+babel.config.cjs
+node_modules
+

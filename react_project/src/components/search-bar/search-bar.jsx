@@ -1,19 +1,26 @@
-import { TextField, CircularProgress } from "@mui/material";
-import { useEffect, useRef, useState } from "react";
-import { useQuery, QueryClient, QueryClientProvider } from "react-query";
-import { useDebounce } from "use-debounce";
-import DynamicTable from "../table/dynamic-table";
-import styles from "./search-bar.module.css";
-import Chart from "chart.js/auto";
+import {TextField, CircularProgress} from '@mui/material';
+import {useEffect, useRef, useState} from 'react';
+import DynamicTable from '../dynamic-table/dynamic-table.jsx';
+import styles from './search-bar.module.css';
+import Chart from 'chart.js/auto';
+import {useSearch} from '../../utils/use-search.js';
+import {QueryClient, QueryClientProvider} from "react-query";
+import {getCurrencyDataPoint} from "../../utils/currency-data.js";
 
 const queryClient = new QueryClient();
-
 const SearchBar = () => {
   const tableColumns = [
-    { Header: "کد", accessor: "code" },
-    { Header: "کشور", accessor: "name" },
+    {Header: 'کد', accessor: 'code'},
+    {Header: 'کشور', accessor: 'name'},
   ];
-  const [searchQuery, setSearchQuery] = useState("");
+
+  const {
+    searchQuery,
+    setSearchQuery,
+    searchResults,
+    isLoading,
+  } = useSearch();
+
   const [currencyData, setCurrencyData] = useState([]);
   const [countryCode, setCountryCode] = useState(null);
   const chartRef = useRef(null);
@@ -22,51 +29,19 @@ const SearchBar = () => {
     setSearchQuery(event.target.value);
   };
 
-  const [debouncedSearchQuery] = useDebounce(searchQuery, 500);
-
-  const { data: searchResults, isLoading } = useQuery(
-    ["searchResults", debouncedSearchQuery],
-    async () => {
-      if (searchQuery.trim() === "") {
-        return [];
-      }
-
-      const response = await fetch(`http://localhost:3000/?q=${searchQuery}`);
-      const data = await response.json();
-      return data.data.results;
-    }
-  );
-
-  const tableData = searchResults?.map((result) => result.item);
-
-  const fetchCurrencyData = async (countryCode) => {
-    try {
-      const response = await fetch(
-        `http://localhost:3000/chart/${countryCode}`
-      );
-      const data = await response.json();
-      const { x, y } = data.data;
-      const currencyDataPoint = { x, y };
-      setCountryCode(countryCode);
-      setCurrencyData([currencyDataPoint]);
-    } catch (error) {
-      console.error("Error fetching currency data:", error);
-    }
-  };
-
   useEffect(() => {
     if (!chartRef.current) return;
 
-    const ctx = chartRef.current.getContext("2d");
+    const ctx = chartRef.current.getContext('2d');
     const chart = new Chart(ctx, {
-      type: "line",
+      type: 'line',
       data: {
         labels: currencyData.map((point) => point.x),
         datasets: [
           {
             label: `Fictional Currency Value of ${countryCode}`,
             data: currencyData.map((point) => point.y),
-            borderColor: "rgb(89, 65, 205)",
+            borderColor: 'rgb(89, 65, 205)',
             fill: false,
           },
         ],
@@ -81,7 +56,7 @@ const SearchBar = () => {
             display: true,
             title: {
               display: true,
-              text: "Time",
+              text: 'Time',
             },
             ticks: {
               precision: 0,
@@ -91,7 +66,7 @@ const SearchBar = () => {
             display: true,
             title: {
               display: true,
-              text: "Currency Value",
+              text: 'Currency Value',
             },
           },
         },
@@ -109,16 +84,10 @@ const SearchBar = () => {
         return;
 
       try {
-        const response = await fetch(
-          `http://localhost:3000/chart/${countryCode}`
-        );
-        const data = await response.json();
-        const { x, y } = data.data;
-        const currencyDataPoint = { x, y };
-
+        const currencyDataPoint = await getCurrencyDataPoint(countryCode);
         setCurrencyData((prevData) => [...prevData, currencyDataPoint]);
       } catch (error) {
-        console.error("Error fetching currency data:", error);
+        console.error('Error fetching currency data:', error);
       }
     };
 
@@ -130,16 +99,21 @@ const SearchBar = () => {
     };
   }, [currencyData, countryCode]);
 
-  let textFieldColor = "primary";
-  if (searchQuery.trim() !== "") {
+  let textFieldColor = 'primary';
+  if (searchQuery && searchQuery.trim() !== '') {
     if (isLoading) {
-      textFieldColor = "info";
+      textFieldColor = 'info';
     } else if (Array.isArray(searchResults) && searchResults.length > 0) {
-      textFieldColor = "success";
+      textFieldColor = 'success';
     } else {
-      textFieldColor = "warning";
+      textFieldColor = 'warning';
     }
   }
+
+  const handleRowClick = async (row) => {
+    setCountryCode(row.code);
+    setCurrencyData([await getCurrencyDataPoint(row.code)]);
+  };
 
   return (
     <div className="container">
@@ -154,20 +128,21 @@ const SearchBar = () => {
       />
       <div className={styles.result}>
         {isLoading ? (
-          <CircularProgress />
+          <CircularProgress/>
         ) : searchResults.length > 0 ? (
           <div className={styles.resultContainer}>
             <div className={styles.tableContainer}>
               <DynamicTable
+                data-testid="table"
                 columns={tableColumns}
-                data={tableData}
-                onRowClick={(row) => fetchCurrencyData(row.code)}
-                selectedCountryCode={countryCode}
+                data={searchResults}
+                onRowClick={handleRowClick}
+                selectedRow={countryCode}
               />
             </div>
             <div className={styles.chartContainer}>
               {currencyData.length > 0 ? (
-                <canvas ref={chartRef} className={styles.chart} />
+                <canvas ref={chartRef} className={styles.chart}/>
               ) : (
                 <p className={styles.nothingToShow}>
                   Select a country to see the fictional currency values of it.
@@ -175,7 +150,7 @@ const SearchBar = () => {
               )}
             </div>
           </div>
-        ) : searchQuery.trim() !== "" ? (
+        ) : searchQuery.trim() !== '' ? (
           <p className={styles.noResults}>No results found.</p>
         ) : (
           <p className={styles.nothingToShow}>Nothing to show.</p>
@@ -185,12 +160,11 @@ const SearchBar = () => {
   );
 };
 
-const App = () => {
+const SearchBarApp = () => {
   return (
     <QueryClientProvider client={queryClient}>
-      <SearchBar />
+      <SearchBar/>
     </QueryClientProvider>
   );
 };
-
-export default App;
+export default SearchBarApp;
