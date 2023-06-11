@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import {useEffect, useRef} from "react";
 import styles from "./layout.module.css";
 
 function Layout() {
@@ -16,6 +16,7 @@ function Layout() {
         }
       }
     }
+
     window.addEventListener("resize", handleResize);
     handleResize();
     return () => window.removeEventListener("resize", handleResize);
@@ -26,6 +27,7 @@ function Layout() {
       <div className="container">
         <div dir="rtl" ref={layoutRef} className={styles.layoutContainer}>
           <main ref={mainRef} className={styles.main}>
+            <h1>متن اصلی</h1>
             <p>
               لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
               استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
@@ -52,6 +54,7 @@ function Layout() {
             </p>
           </main>
           <aside className={styles.sidebar}>
+            <h2>متن کناری</h2>
             <p>
               لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
               استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله

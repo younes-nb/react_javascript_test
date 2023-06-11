@@ -1,27 +1,12 @@
-import { Link } from "react-router-dom";
-import styles from "./App.module.css";
+import Navbar from "./components/navbar/navbar.jsx";
+import {Outlet} from "react-router-dom";
 
 function App() {
-  return (
-    <>
-      <div className="container">
-        <main dir="ltr">
-        <h1>Steps</h1>
-        <ul className={styles.list}>
-          <Link to="/layout" className={styles.listItem}>
-            2. Layout
-          </Link>
-          <Link to="/table" className={styles.listItem}>
-            3. Table
-          </Link>
-          <Link to="/searchbar" className={styles.listItem}>
-            4. Search bar
-          </Link>
-        </ul>
-        </main>
-      </div>
+  return (<>
+      <Navbar></Navbar>
+      <Outlet></Outlet>
     </>
-  );
+  )
 }
 
 export default App;

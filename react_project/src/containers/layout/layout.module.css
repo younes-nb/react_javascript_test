@@ -1,0 +1,29 @@
+.layoutContainer {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    column-gap: var(--spacing-6);
+    font-family: serif;
+}
+
+.mobileLayout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 0;
+    row-gap: var(--spacing-6);
+}
+
+.main,
+.sidebar {
+    border-radius: 10px;
+    box-shadow: var(--box-shadow-light);
+    padding: var(--spacing-5);
+    text-align: justify;
+}
+
+.main {
+    background-color: var(--clr-gray-100);
+}
+
+.sidebar {
+    background-color: var(--clr-gray-200);
+}

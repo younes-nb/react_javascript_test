@@ -1,5 +1,5 @@
 import {render, screen, fireEvent} from '@testing-library/react';
-import SearchBar from '../components/search-bar/search-bar.jsx';
+import SearchBar from '../containers/search-bar/search-bar.jsx';
 import {QueryClient, QueryClientProvider} from "react-query";
 
 jest.mock('../utils/use-search', () => ({

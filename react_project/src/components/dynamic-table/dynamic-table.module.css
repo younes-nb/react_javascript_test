@@ -1,47 +1,47 @@
 .tableWrapper {
-  max-height: 70vh;
-  overflow: auto;
-  border-radius: 8px;
-  box-shadow: var(--box-shadow-dark);
+    max-height: 70vh;
+    overflow: auto;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow-dark);
 }
 
 .table {
-  width: 100%;
-  margin: 0 auto;
-  border-collapse: separate;
-  border-spacing: 0;
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0;
 }
 
 .table thead th {
-  background-color: var(--clr-blue-primary);
-  color: var(--clr-white);
-  position: sticky;
-  top: 0;
-  font-family: "Times New Roman", Times, serif;
+    background-color: var(--clr-blue-primary);
+    color: var(--clr-white);
+    position: sticky;
+    top: 0;
+    font-family: serif;
 }
 
 .table th,
 .table td {
-  padding: var(--spacing-3) 0 var(--spacing-3) var(--spacing-3);
-  text-align: right;
-  vertical-align: middle;
-  border-top: 1px solid var(--clr-gray-200);
-  cursor: pointer;
+    padding: var(--spacing-3) 0 var(--spacing-3) var(--spacing-3);
+    text-align: right;
+    vertical-align: middle;
+    border-top: 1px solid var(--clr-gray-200);
+    cursor: pointer;
 }
 
 .table tbody tr:nth-child(even) {
-  background-color: var(--clr-gray-100);
+    background-color: var(--clr-gray-100);
 }
 
 .table tbody tr:hover {
-  background-color: var(--clr-blue-tint);
+    background-color: var(--clr-blue-tint);
 }
 
 .table td:first-child,
 .table th:first-child {
-  padding-right: var(--spacing-5);
+    padding-right: var(--spacing-5);
 }
 
 .selectedRow {
-  color: var(--clr-blue-primary);
+    color: var(--clr-blue-primary);
 }

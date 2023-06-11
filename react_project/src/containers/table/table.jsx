@@ -1,5 +1,5 @@
 import {useMemo, useState} from "react";
-import DynamicTable from "../dynamic-table/dynamic-table.jsx";
+import DynamicTable from "../../components/dynamic-table/dynamic-table.jsx";
 import tableData from "./table-data.json";
 
 function Table() {

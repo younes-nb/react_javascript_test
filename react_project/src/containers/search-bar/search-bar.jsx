@@ -1,6 +1,6 @@
 import {TextField, CircularProgress} from '@mui/material';
 import {useEffect, useRef, useState} from 'react';
-import DynamicTable from '../dynamic-table/dynamic-table.jsx';
+import DynamicTable from '../../components/dynamic-table/dynamic-table.jsx';
 import styles from './search-bar.module.css';
 import Chart from 'chart.js/auto';
 import {useSearch} from '../../utils/use-search.js';
